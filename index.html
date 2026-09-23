@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Aniket Mahato — Product Designer</title>
+<meta name="description" content="Aniket Mahato — Product Designer (UX/UI) based in Chandigarh, India.">
+<meta property="og:title" content="Aniket Mahato — Product Designer">
+<meta property="og:description" content="Product designer (UX/UI) based in Chandigarh, India.">
+<meta property="og:image" content="images/covers/conexus.jpg">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23141614'/><text x='50%' y='57%' text-anchor='middle' dominant-baseline='middle' font-family='Arial' font-weight='700' font-size='26' fill='%23F2F3EF'>AM</text></svg>">
+<link rel="preconnect" href="https://api.fontshare.com" crossorigin>
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f[]=switzer@400,500,600&f[]=gambetta@400,401&display=swap">
+<style>
+:root{
+  --bg:#F2F3EF; --surface:#E6E8E2; --ink:#141614; --muted:#5F645C; --line:#D0D3CA;
+  --accent:#3346E0; --ok:#1F9D55;
+  --sans:"Switzer","Helvetica Neue",Arial,sans-serif;
+  --serif:"Gambetta",Georgia,serif;
+  --max:1320px; --pad:clamp(16px,4vw,48px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important;animation:none!important}}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans);-webkit-font-smoothing:antialiased;font-feature-settings:"ss01"}
+a{color:inherit;text-decoration:none}
+a:hover{color:var(--accent)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:4px}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--max);margin:0 auto;padding-inline:var(--pad)}
+.lbl{font:500 12px/1.4 var(--sans);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.lbl.a{color:var(--accent)}
+.it{font-family:var(--serif);font-style:italic;font-weight:400;letter-spacing:-.01em}
+h1,h2,h3{font-weight:500;margin:0;text-wrap:balance}
+p{text-wrap:pretty}
+
+/* nav */
+.nav{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:16px}
+.brand{font-weight:600;font-size:18px;letter-spacing:-.02em}
+.links{display:flex;gap:clamp(6px,1.6vw,22px)}
+.links a{padding:4px 2px;color:var(--muted)}
+.links a:hover{color:var(--ink)}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px);align-items:end;padding-block:clamp(40px,6vw,80px) clamp(56px,8vw,112px)}
+.portrait{position:relative;aspect-ratio:4/5;border-radius:18px;overflow:hidden;background:radial-gradient(120% 80% at 20% 10%,color-mix(in srgb,var(--accent) 22%,transparent),transparent 60%),var(--surface)}
+.portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.portrait .ini{position:absolute;inset:0;display:grid;place-items:center;font:600 clamp(72px,11vw,150px)/1 var(--sans);letter-spacing:-.06em;color:color-mix(in srgb,var(--ink) 12%,transparent)}
+.portrait .tag{position:absolute;left:16px;right:16px;bottom:14px;display:flex;justify-content:space-between;z-index:1}
+.hero-txt{display:flex;flex-direction:column;gap:32px}
+.status{display:inline-flex;white-space:nowrap;align-self:flex-start;align-items:center;gap:10px;padding:6px 12px 6px 10px;border:1px solid var(--line);border-radius:99px}
+.dot{width:8px;height:8px;border-radius:50%;background:var(--ok);box-shadow:0 0 0 4px color-mix(in srgb,var(--ok) 20%,transparent);animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{50%{box-shadow:0 0 0 7px transparent}}
+.hero h1{font-size:clamp(40px,5.6vw,78px);line-height:1.02;letter-spacing:-.045em}
+.hero h1 .it{color:var(--accent);letter-spacing:-.03em}
+.cta{display:flex;gap:22px;flex-wrap:wrap;align-items:center}
+.btn{display:inline-flex;align-items:center;gap:10px;padding:14px 22px;border-radius:99px;background:var(--ink);color:var(--bg);font-weight:500;font-size:15px;transition:background .2s,transform .2s}
+.btn:hover{background:var(--accent);color:#fff;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:var(--ink);border:1px solid var(--line)}
+.btn.ghost:hover{border-color:var(--ink);color:var(--ink);background:transparent}
+
+/* sections */
+.sec{border-top:1px solid var(--line);padding-block:clamp(56px,8vw,112px);scroll-margin-top:60px}
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:16px;flex-wrap:wrap;margin-bottom:clamp(28px,4vw,52px)}
+.head>div{display:flex;flex-direction:column;gap:12px}
+.h2{font-size:clamp(34px,4.4vw,56px);letter-spacing:-.04em;line-height:1.02}
+
+/* work */
+.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:clamp(40px,4vw,60px) clamp(16px,2.5vw,28px)}
+.grid.three{grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(28px,3vw,40px) clamp(16px,2.5vw,28px)}
+.card{display:flex;flex-direction:column;gap:14px;color:var(--ink)}
+.card:hover{color:var(--ink)}
+.cover{position:relative;aspect-ratio:808/632;border-radius:14px;overflow:hidden;background:var(--surface)}
+.cover img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.2,.7,.2,1)}
+.card:hover .cover img{transform:scale(1.035)}
+.cover .go{position:absolute;right:14px;top:14px;padding:8px 14px;border-radius:99px;background:var(--bg);font-size:13px;font-weight:500;opacity:0;transform:translateY(-6px);transition:.3s}
+.card:hover .go{opacity:1;transform:none}
+.meta{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.card h3{font-size:clamp(21px,2vw,26px);letter-spacing:-.03em;line-height:1.2}
+.three .card h3{font-size:19px}
+.card p{margin:-6px 0 0;color:var(--muted);max-width:56ch}
+.sub{margin-top:clamp(56px,7vw,88px);display:flex;flex-direction:column;gap:24px}
+
+/* about */
+.two{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(28px,5vw,72px)}
+.lead{font-size:clamp(24px,2.8vw,36px);line-height:1.2;letter-spacing:-.03em;margin:0 0 20px}
+.lead .it{color:var(--accent)}
+.facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:12px;overflow:hidden;margin-top:28px}
+.facts div{background:var(--bg);padding:16px;display:flex;flex-direction:column;gap:6px}
+
+/* services */
+.rows{border-top:1px solid var(--ink)}
+.srv{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:12px 32px;padding-block:28px;border-bottom:1px solid var(--line);align-items:baseline}
+.srv>div{display:flex;gap:20px;align-items:baseline}
+.srv h3{font-size:clamp(24px,2.6vw,34px);letter-spacing:-.035em;line-height:1.1}
+.srv p{margin:0;color:var(--muted);max-width:52ch}
+.tools{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:12px}
+.tool{background:var(--surface);border-radius:14px;padding:18px;display:flex;flex-direction:column;gap:14px}
+.tool .ab{width:40px;height:40px;border-radius:10px;background:var(--bg);display:grid;place-items:center;font-weight:600;font-size:14px;color:var(--accent)}
+.tool span:last-child{color:var(--muted);font-size:14px;line-height:1.4}
+
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:32px 20px;list-style:none;margin:0;padding:0}
+.steps li{border-top:2px solid var(--ink);padding-top:18px;display:flex;flex-direction:column;gap:8px}
+.steps .n{font:italic 400 52px/1 var(--serif);color:var(--accent)}
+.steps h3{font-size:21px;letter-spacing:-.02em;margin-top:8px}
+.steps p{margin:0;color:var(--muted);font-size:15px;max-width:32ch}
+
+/* contact */
+.contact{display:flex;flex-direction:column;gap:30px;padding-block:clamp(72px,10vw,140px)}
+.contact h2{font-size:clamp(46px,7.6vw,116px);letter-spacing:-.055em;line-height:.95;max-width:13ch}
+.contact h2 .it{color:var(--accent)}
+
+/* footer */
+footer{background:var(--ink);color:var(--bg)}
+footer .wrap{padding-block:clamp(48px,6vw,80px) 32px;display:flex;flex-direction:column;gap:clamp(40px,6vw,72px)}
+.fcols{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px}
+.fcols div{display:flex;flex-direction:column;gap:10px}
+.fcols .lbl{color:#9BA096}
+.fcols a,.fcols span:not(.lbl){color:#C9CCC3}
+.fcols a:hover{color:#fff}
+.big{font-weight:500;font-size:clamp(56px,13.5vw,210px);letter-spacing:-.065em;line-height:.85}
+.copy{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap;border-top:1px solid #2B2F2A;padding-top:20px}
+.copy,.copy a{color:#9BA096}
+.copy a:hover{color:#fff}
+
+/* case study */
+#case{display:none}
+body.is-case #home{display:none}
+body.is-case #case{display:block}
+.cs-top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-top:clamp(28px,4vw,48px)}
+.cs-head{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:24px clamp(28px,5vw,72px);align-items:end;padding-block:clamp(32px,5vw,64px) clamp(28px,4vw,48px)}
+.cs-head h1{font-size:clamp(46px,7.4vw,112px);line-height:.95;letter-spacing:-.055em}
+.cs-head p{font-size:clamp(19px,1.9vw,24px);line-height:1.35;letter-spacing:-.015em;margin:0}
+.cs-meta{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid var(--ink);border-bottom:1px solid var(--line)}
+.cs-meta div{padding:16px 16px 18px 0;display:flex;flex-direction:column;gap:4px}
+.cs-meta b{font-weight:500}
+.cs-hero{margin-top:clamp(28px,4vw,48px);border-radius:18px;overflow:hidden;background:var(--surface)}
+.cs-hero img{width:100%}
+.cs-body{display:flex;flex-direction:column;gap:clamp(56px,7vw,104px);padding-block:clamp(56px,8vw,112px)}
+.blk{display:flex;flex-direction:column;gap:clamp(24px,3vw,40px)}
+.blk-t{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:16px clamp(28px,5vw,72px)}
+.blk-t>div:first-child{display:flex;flex-direction:column;gap:10px}
+.blk-t h2{font-size:clamp(28px,3.4vw,44px);letter-spacing:-.04em;line-height:1.05}
+.prose{font-size:17px;max-width:62ch}
+.prose p{margin:0 0 14px}
+.prose p:last-child{margin-bottom:0}
+.prose ul{margin:0;padding:0;list-style:none;display:flex;flex-direction:column}
+.prose li{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:minmax(0,160px) minmax(0,1fr);gap:16px}
+.prose li:first-child{border-top:1px solid var(--line)}
+.prose li b{font-weight:500}
+.prose li.s{grid-template-columns:1fr}
+.prose .note{margin-top:18px;padding:16px 18px;background:var(--surface);border-radius:12px;font-size:16px}
+.cols2{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.cols2 h3{font-size:19px;margin-bottom:8px;letter-spacing:-.02em}
+.shot{border-radius:14px;overflow:hidden;background:var(--surface)}
+.shot img{width:100%}
+.learn{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.learn div{background:var(--surface);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
+.learn .n{font:italic 400 40px/1 var(--serif);color:var(--accent)}
+.learn h3{font-size:20px;letter-spacing:-.02em}
+.learn p{margin:0;color:var(--muted);font-size:15px}
+.soon{display:flex;flex-direction:column;align-items:flex-start;gap:20px;padding:clamp(28px,4vw,48px);background:var(--surface);border-radius:18px}
+.soon p{margin:0;font-size:18px;max-width:52ch}
+.next{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,420px);gap:24px;align-items:center;border-top:1px solid var(--ink);padding-block:clamp(32px,4vw,48px) clamp(56px,8vw,96px);color:var(--ink)}
+.next>div{display:flex;flex-direction:column;gap:10px}
+.next .t{font-weight:500;font-size:clamp(36px,5vw,66px);letter-spacing:-.05em;line-height:1}
+.next:hover .t{color:var(--accent)}
+.next .cover{border-radius:12px}
+
+@media (max-width:960px){
+  .grid.three{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .tools{grid-template-columns:repeat(3,minmax(0,1fr))}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:760px){
+  .hero,.two,.cs-head,.blk-t,.srv,.next{grid-template-columns:1fr}
+  .portrait{max-width:360px}
+  .grid,.grid.three,.learn,.cols2{grid-template-columns:1fr}
+  .facts{grid-template-columns:1fr}
+  .fcols{grid-template-columns:1fr 1fr}
+  .links a.hide{display:none}
+  .prose li{grid-template-columns:1fr;gap:2px}
+}
+@media (max-width:480px){
+  .tools,.steps,.fcols{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap">
+    <a class="brand" href="#top">Aniket Mahato</a>
+    <nav class="links lbl" aria-label="Sections">
+      <a href="#work">[ Work ]</a>
+      <a href="#about" class="hide">[ About ]</a>
+      <a href="#services" class="hide">[ Services ]</a>
+      <a href="#contact">[ Contact ]</a>
+    </nav>
+  </div>
+</header>
+
+<main id="home" class="wrap">
+  <section class="hero" id="top">
+    <div class="portrait">
+      <div class="ini">AM</div>
+      <!-- Add your photo as images/portrait.jpg — it appears automatically. -->
+      <img src="images/portrait.jpg" alt="Aniket Mahato" onerror="this.remove()">
+      <div class="tag lbl"><span>[ Chandigarh, IN ]</span><span>[ UX / UI ]</span></div>
+    </div>
+    <div class="hero-txt">
+      <span class="status lbl"><span class="dot" aria-hidden="true"></span>Available for freelance &amp; full-time</span>
+      <h1>Product designer turning complex <span class="it">B2B and AI products</span> into interfaces people get on first use.</h1>
+      <div class="cta">
+        <a class="btn" href="#contact">Get in touch <span aria-hidden="true">→</span></a>
+        <a class="lbl" href="#work">Scroll to explore ↓</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="work">
+    <div class="head">
+      <div><span class="lbl a">[ 01 ] Work</span><h2 class="h2">Selected <span class="it">case studies</span></h2></div>
+      <span class="lbl">07 projects</span>
+    </div>
+    <div class="grid">
+      <a class="card" href="#/work/conexus">
+        <div class="cover"><img src="images/covers/conexus.jpg" alt="Conexus cover" loading="lazy"><span class="go">Read case study →</span></div>
+        <div class="meta"><h3>Conexus</h3><span class="lbl">[ Mobile app ]</span></div>
+        <p>A B2B consultation platform connecting businesses with trusted experts — from discovery to booked session.</p>
+      </a>
+      <a class="card" href="#/work/hippo-agent-app">
+        <div class="cover"><img src="images/covers/hippo-agent-app.jpg" alt="Hippo Agent App cover" loading="lazy"><span class="go">Read case study →</span></div>
+        <div class="meta"><h3>Hippo Agent App</h3><span class="lbl">[ Mobile UX/UI ]</span></div>
+        <p>A mobile-first support app so agents can handle chats, tickets and broadcasts away from the desktop.</p>
+      </a>
+      <a class="card" href="#/work/hippo-website">
+        <div class="cover"><img src="images/covers/hippo-website.jpg" alt="Hippo website cover" loading="lazy"><span class="go">View project →</span></div>
+        <div class="meta"><h3>Hippo — AI Voice Agent</h3><span class="lbl">[ Website revamp ]</span></div>
+        <p>Reworking the marketing site for an AI voice agent product so visitors understand the value and reach a demo faster.</p>
+      </a>
+      <a class="card" href="#/work/benny">
+        <div class="cover"><img src="images/covers/benny.jpg" alt="Benny cover" loading="lazy"><span class="go">View project →</span></div>
+        <div class="meta"><h3>Benny</h3><span class="lbl">[ Website revamp ]</span></div>
+        <p>A refreshed website for the Benny mobile app, built to showcase the product and drive app downloads.</p>
+      </a>
+    </div>
+
+    <div class="sub">
+      <span class="lbl">More work — visual &amp; brand</span>
+      <div class="grid three">
+        <a class="card" href="#/work/branding-guidelines">
+          <div class="cover"><img src="images/covers/branding-guidelines.jpg" alt="Branding Guidelines cover" loading="lazy"></div>
+          <div class="meta"><h3>Branding Guidelines</h3><span class="lbl">Brand identity</span></div>
+        </a>
+        <a class="card" href="#/work/social-ads">
+          <div class="cover"><img src="images/covers/social-ads.jpg" alt="Social Media Ads cover" loading="lazy"></div>
+          <div class="meta"><h3>Social Ads &amp; Banners</h3><span class="lbl">Visual design</span></div>
+        </a>
+        <a class="card" href="#/work/newsroom">
+          <div class="cover"><img src="images/covers/newsroom.jpg" alt="Newsroom Landing Page cover" loading="lazy"></div>
+          <div class="meta"><h3>Newsroom Landing Page</h3><span class="lbl">UI design</span></div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="about">
+    <div class="two">
+      <div class="head" style="margin:0;align-items:flex-start"><div><span class="lbl a">[ 02 ] About</span><h2 class="h2">My story</h2></div></div>
+      <div>
+        <p class="lead">I design products that make complicated things feel <span class="it">simple</span> — from B2B platforms and AI tools to the websites that sell them.</p>
+        <p style="margin:0;max-width:62ch">My work spans the full journey: understanding who the product is for, mapping flows, and taking interfaces through to polished, build-ready screens. Alongside product work I bring a background in brand and visual design, so what I ship looks as considered as it works.</p>
+        <div class="facts">
+          <div><span class="lbl">Based in</span><b style="font-weight:500">Chandigarh, India</b></div>
+          <div><span class="lbl">Focus</span><b style="font-weight:500">Product &amp; UX/UI</b></div>
+          <div><span class="lbl">Open to</span><b style="font-weight:500">Freelance, full-time</b></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="services">
+    <div class="head"><div><span class="lbl a">[ 03 ] Expertise</span><h2 class="h2">What I do</h2></div></div>
+    <div class="rows">
+      <div class="srv"><div><span class="lbl">[01]</span><h3>Product design</h3></div><p>End-to-end UX for web platforms and dashboards: flows, wireframes, and final UI.</p></div>
+      <div class="srv"><div><span class="lbl">[02]</span><h3>Mobile apps</h3></div><p>iOS and Android interfaces designed around the few tasks people repeat every day.</p></div>
+      <div class="srv"><div><span class="lbl">[03]</span><h3>Websites</h3></div><p>Marketing sites and landing pages that explain the product clearly and convert.</p></div>
+      <div class="srv"><div><span class="lbl">[04]</span><h3>Brand &amp; visual</h3></div><p>Brand guidelines, social campaigns and visual assets that stay consistent.</p></div>
+    </div>
+    <div class="sub">
+      <span class="lbl">[ Toolkit ]</span>
+      <div class="tools">
+        <div class="tool"><span class="ab">Fi</span><div><b style="font-weight:500;display:block">Figma</b><span>UI, prototyping, systems</span></div></div>
+        <div class="tool"><span class="ab">Fj</span><div><b style="font-weight:500;display:block">FigJam</b><span>Flows and workshops</span></div></div>
+        <div class="tool"><span class="ab">Ps</span><div><b style="font-weight:500;display:block">Photoshop</b><span>Image editing</span></div></div>
+        <div class="tool"><span class="ab">Ai</span><div><b style="font-weight:500;display:block">Illustrator</b><span>Vector and brand</span></div></div>
+        <div class="tool"><span class="ab">Pr</span><div><b style="font-weight:500;display:block">Premiere Pro</b><span>Video editing</span></div></div>
+        <div class="tool"><span class="ab">No</span><div><b style="font-weight:500;display:block">Notion</b><span>Research and notes</span></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" id="process">
+    <div class="head"><div><span class="lbl a">[ 04 ] Process</span><h2 class="h2">How I work</h2></div></div>
+    <ol class="steps">
+      <li><span class="n">1</span><h3>Understand</h3><p>Goals, users and constraints — what success looks like for the business.</p></li>
+      <li><span class="n">2</span><h3>Map</h3><p>User flows and information architecture before any pixels.</p></li>
+      <li><span class="n">3</span><h3>Design</h3><p>Wireframes to high-fidelity UI, tested and iterated with the team.</p></li>
+      <li><span class="n">4</span><h3>Hand off</h3><p>Clean files, components and specs developers can build from.</p></li>
+    </ol>
+  </section>
+
+  <section class="sec contact" id="contact">
+    <span class="lbl a">[ 05 ] Contact</span>
+    <h2>Have a product that needs <span class="it">clarity?</span> Let’s talk.</h2>
+    <div class="cta"><a class="btn" href="https://www.behance.net/aniketmahato0212" target="_blank" rel="noopener">Message me on Behance <span aria-hidden="true">↗</span></a></div>
+  </section>
+</main>
+
+<main id="case" class="wrap" aria-live="polite"></main>
+
+<footer>
+  <div class="wrap">
+    <div class="fcols">
+      <div><span class="lbl">Personal info</span><span>Product Designer · UX/UI</span><span>[ Chandigarh, India ]</span></div>
+      <div><span class="lbl">Navigate</span><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a><a href="#contact">Contact</a></div>
+      <div><span class="lbl">Elsewhere</span><a href="https://www.behance.net/aniketmahato0212" target="_blank" rel="noopener">Behance ↗</a></div>
+    </div>
+    <div class="big">Aniket Mahato</div>
+    <div class="copy lbl"><span>© 2026 Aniket Mahato</span><a href="#top">Back to top ↑</a></div>
+  </div>
+</footer>
+
+<script>
+/* ===== Case studies — edit text/images here ===== */
+const B = 'https://www.behance.net/gallery/';
+const PROJECTS = [
+  { slug:'conexus', title:'Conexus', cover:'images/covers/conexus.jpg', hero:'images/conexus/01-hero.jpg',
+    summary:'Connecting businesses with trusted experts through one seamless consultation platform.',
+    meta:[['Type','Mobile app'],['Role','Product designer'],['Timeline','Sep – Jan'],['Year','2026']],
+    behance:B+'253713291/Conexus-B2B-Consultation-Platform-UXUI',
+    blocks:[
+      { label:'Problem', title:'Booking an expert today is scattered across six different tools.', img:'images/conexus/02-problem.jpg',
+        body:'<ul><li><b>Research</b><span>No trust signal</span></li><li><b>Cold calls</b><span>Time lost</span></li><li><b>WhatsApp threads</b><span>No record</span></li><li><b>Manual booking</b><span>Error-prone</span></li><li><b>Email chains</b><span>Slow replies</span></li><li><b>Calendar juggling</b><span>Missed slots</span></li></ul>' },
+      { label:'Solution', title:'One flow. Seven steps. Zero friction.', img:'images/conexus/03-solution.jpg',
+        body:'<p>Research → choose category → compare experts → book → chat → consultation → history.</p><p class="note"><b style="font-weight:500">Design decision —</b> people know the type of help they need, not a consultant’s name. So category discovery became the primary navigation, not search.</p>' },
+      { label:'Design goals', title:'Four principles the product is measured against.', img:'images/conexus/04-goals.jpg',
+        body:'<ul><li><b>Speed</b><span>Four taps from need to confirmed appointment.</span></li><li><b>Simplicity</b><span>One decision per screen — nothing competing for attention.</span></li><li><b>Trust</b><span>Verification, ratings and credentials surface before price.</span></li><li><b>Scalability</b><span>One pattern that holds for any new category.</span></li></ul>' },
+      { label:'Process', title:'Eight weeks, six phases.', img:'images/conexus/05-process.jpg',
+        body:'<p>Research, insights, ideation, wireframes, branding and UI design ran as overlapping phases from September to January.</p>' },
+      { label:'Competitive landscape', title:'Everyone owns one category. Nobody owns the platform.', img:'images/conexus/06-competitive.jpg',
+        body:'<p>Practo-style apps cover healthcare only, legal marketplaces cover legal only, and generic booking tools only handle scheduling. Conexus brings verified experts, multiple categories, org billing, chat and history into one app.</p>' },
+      { img:'images/conexus/07-product.jpg', alt:'Conexus app in hand' },
+      { label:'Wireframes', title:'Structure before surface.', img:'images/conexus/08-wireframes.jpg',
+        body:'<ul><li><b>Home</b><span>Categories above the fold.</span></li><li><b>Expert profile</b><span>Trust signals stacked first.</span></li><li><b>Booking</b><span>Date and time on one screen.</span></li></ul>' },
+      { label:'Information architecture', title:'Four tabs. Nothing buried.', img:'images/conexus/09-ia.jpg',
+        body:'<ul><li><b>Home</b><span>Categories, recommended experts, upcoming session</span></li><li><b>Sessions</b><span>Booking, chat &amp; call, history</span></li><li><b>Discover</b><span>Search &amp; filters, compare experts, expert profile</span></li><li><b>Profile</b><span>Organization, payments, settings</span></li></ul>' },
+      { label:'Home screen', title:'Discovery, front and center.', img:'images/conexus/10-home.jpg',
+        body:'<p>Search-first navigation for faster expert discovery, an AI assistant that matches people to the right expert from a description of their situation, and categories that let people browse by need rather than by consultant name.</p>' },
+      { label:'Booking flow', title:'Three screens to a confirmed session.', img:'images/conexus/11-booking.jpg',
+        body:'<p>Pick a date → Confirm and pay → You’re booked.</p>' },
+      { label:'Learnings', title:'What the product taught me.', learn:[
+        ['Trust drives engagement','Verification badges moved bookings more than any layout change we tested.'],
+        ['Simple booking completes','Every step removed between intent and confirmation lifted completion.'],
+        ['Consistency is usability','One card pattern across seven categories made the app feel smaller than it is.'] ] }
+    ] },
+  { slug:'hippo-agent-app', title:'Hippo Agent App', cover:'images/covers/hippo-agent-app.jpg', hero:'images/hippo-agent-app/page-01.jpg',
+    summary:'A mobile-first support experience for agents — chats, tickets and broadcasts, away from the desk.',
+    meta:[['Platform','Mobile app'],['Domain','Customer support / agent tools'],['Tools','Figma, FigJam'],['Team','Collaboration with Ishita'],['Year','2025']],
+    behance:B+'243394573/Hippo-Agent-App-Mobile-UXUI-Case-Study',
+    blocks:[
+      { label:'Overview', title:'Project overview', img:'images/hippo-agent-app/page-02.jpg',
+        body:'<p>Hippo is a customer communication platform that helps businesses manage customer conversations through chats, tickets, and broadcasts using a web dashboard. This project took the agent experience from concept to high-fidelity mobile design.</p>' },
+      { label:'Roles', title:'Roles & responsibilities',
+        body:'<div class="cols2"><div><h3>Aniket</h3><ul><li class="s">UI visual design</li><li class="s">Component styling &amp; consistency</li><li class="s">High-fidelity screens</li><li class="s">Visual hierarchy and spacing</li><li class="s">Design refinements &amp; iterations</li></ul></div><div><h3>Ishita</h3><ul><li class="s">UX research &amp; problem framing</li><li class="s">Information architecture</li><li class="s">Core user flows (chats, tickets)</li><li class="s">Interaction design</li><li class="s">Case study documentation</li></ul></div></div><p class="note">Decisions were made collaboratively through discussions and reviews.</p>' },
+      { label:'Context', title:'Context & background', img:'images/hippo-agent-app/page-04.jpg',
+        body:'<p>Hippo already had a web-based dashboard for agents and admins. Agents used it to manage chats, tickets, and broadcasts — but it was optimized for desktop.</p><p class="note"><b style="font-weight:500">Key gap —</b> there was no dedicated mobile app for agents, limiting flexibility and real-time responsiveness.</p>' },
+      { label:'Problem', title:'Despite a powerful web dashboard, agents lacked a mobile experience.',
+        body:'<ul><li class="s">Agents were tied to desktops</li><li class="s">Response times increased</li><li class="s">Unassigned chats and urgent tickets were missed</li><li class="s">Desktop workflows didn’t translate to small screens</li></ul>' },
+      { label:'Design challenge', title:'How might we design a mobile-first agent app that…', img:'images/hippo-agent-app/page-06.jpg',
+        body:'<ul><li class="s">Complements the web dashboard</li><li class="s">Enables quick responses on the go</li><li class="s">Simplifies chat and ticket management</li><li class="s">Preserves full customer context</li></ul>' },
+      { label:'Goals', title:'What the app had to deliver.',
+        body:'<ul><li class="s">Faster agent responses</li><li class="s">Clear chat and ticket prioritization</li><li class="s">Reduced navigation effort</li><li class="s">Quick access to saved replies and plans</li><li class="s">Scalable design for future features</li></ul>' },
+      { label:'Core sections', title:'Five sections, one app.', img:'images/hippo-agent-app/page-08.jpg',
+        body:'<ul><li><b>Chats</b><span>Real-time customer conversations in one place</span></li><li><b>Tickets</b><span>Structured issue tracking &amp; resolution</span></li><li><b>Saved replies</b><span>Predefined responses for faster support</span></li><li><b>Broadcasts</b><span>One-to-many communication with customers</span></li><li><b>Profile</b><span>Agent presence and account settings</span></li></ul>' },
+      { label:'Key UX decisions', title:'Built for fast, one-handed triage.', img:'images/hippo-agent-app/page-09.jpg',
+        body:'<ul><li class="s">Tabs for All / Unassigned / My Chats</li><li class="s">Status &amp; priority badges for quick scanning</li><li class="s">Bottom sheets for secondary actions</li><li class="s">Customer details inside chat</li><li class="s">One-tap saved replies</li></ul>' },
+      { label:'Outcome & learnings', title:'A scalable, mobile-first agent app.', img:'images/hippo-agent-app/page-10.jpg',
+        body:'<p>The result: clear, efficient support workflows on mobile.</p><ul><li class="s">Speed matters more than visual complexity</li><li class="s">Status clarity improves usability</li><li class="s">Mobile requires strong prioritization</li></ul>' }
+    ] },
+  { slug:'hippo-website', title:'Hippo — AI Voice Agent', cover:'images/covers/hippo-website.jpg',
+    summary:'Reworking the marketing site for an AI voice agent product so visitors understand the value and reach a demo faster.',
+    meta:[['Type','Website revamp'],['Platform','Web']], behance:B+'243399707/Hippo-AI-Voice-Agent-Website-Revamp' },
+  { slug:'benny', title:'Benny', cover:'images/covers/benny.jpg',
+    summary:'A refreshed website for the Benny mobile app, built to showcase the product and drive app downloads.',
+    meta:[['Type','Website revamp'],['Platform','Web']], behance:B+'243398935/Benny-Mobile-App-Website-Revamp' },
+  { slug:'branding-guidelines', title:'Branding Guidelines', cover:'images/covers/branding-guidelines.jpg',
+    summary:'A brand guideline system covering logo, colour, typography and how they come together across touchpoints.',
+    meta:[['Type','Brand identity']], behance:B+'222869995/Branding-Guidelines-Logo-Colors-Typography-More' },
+  { slug:'social-ads', title:'Social Media Ads & Banners', cover:'images/covers/social-ads.jpg',
+    summary:'A 2025 series of social ads and banners designed to stop the scroll while staying on-brand.',
+    meta:[['Type','Visual design'],['Year','2025']], behance:B+'222789883/Creative-Social-Media-Ads-Banners-2025' },
+  { slug:'newsroom', title:'Newsroom Landing Page', cover:'images/covers/newsroom.jpg',
+    summary:'A modern, engaging landing page for a newsroom — built so readers find the stories that matter fast.',
+    meta:[['Type','UI design'],['Platform','Web']], behance:B+'222781615/Newsroom-Landing-Page-Modern-Engaging-UI' }
+];
+
+const esc = s => String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+const pad = n => String(n).padStart(2,'0');
+
+function renderCase(i){
+  const p = PROJECTS[i], next = PROJECTS[(i+1) % PROJECTS.length];
+  let n = 0;
+  const blocks = (p.blocks || []).map(b => {
+    const shot = b.img ? `<div class="shot"><img src="${b.img}" alt="${esc(b.alt || b.title || p.title)}" loading="lazy"></div>` : '';
+    if (!b.label) return `<div class="blk">${shot}</div>`;
+    n++;
+    const body = b.learn
+      ? `<div class="learn">${b.learn.map((l,k)=>`<div><span class="n">${pad(k+1)}</span><h3>${esc(l[0])}</h3><p>${esc(l[1])}</p></div>`).join('')}</div>` : '';
+    return `<div class="blk"><div class="blk-t"><div><span class="lbl a">[ ${pad(n)} ] ${esc(b.label)}</span><h2>${esc(b.title)}</h2></div>${b.body ? `<div class="prose">${b.body}</div>` : ''}</div>${body}${shot}</div>`;
+  }).join('');
+  const rest = p.blocks ? `<div class="cs-body">${blocks}</div>`
+    : `<div class="cs-body"><div class="soon"><span class="lbl a">Full case study</span><p>The full write-up for this project is being moved over. Until then, you can see it on Behance.</p><a class="btn" href="${p.behance}" target="_blank" rel="noopener">View on Behance ↗</a></div></div>`;
+  document.getElementById('case').innerHTML = `
+    <div class="cs-top lbl"><a href="#work">← All work</a><span>Case study ${pad(i+1)} / ${pad(PROJECTS.length)}</span></div>
+    <header class="cs-head"><h1>${esc(p.title)}</h1><p>${esc(p.summary)}</p></header>
+    <div class="cs-meta">${p.meta.map(m=>`<div><span class="lbl">${m[0]}</span><b>${esc(m[1])}</b></div>`).join('')}</div>
+    <div class="cs-hero"><img src="${p.hero || p.cover}" alt="${esc(p.title)}"></div>
+    ${rest}
+    ${p.blocks ? `<div style="display:flex;justify-content:center;padding-bottom:clamp(48px,6vw,80px)"><a class="btn ghost" href="${p.behance}" target="_blank" rel="noopener">Also on Behance ↗</a></div>` : ''}
+    <a class="next" href="#/work/${next.slug}"><div><span class="lbl">Next project →</span><span class="t">${esc(next.title)}</span></div><div class="cover"><img src="${next.cover}" alt="${esc(next.title)} cover" loading="lazy"></div></a>`;
+  document.title = p.title + ' — Aniket Mahato';
+}
+
+function route(){
+  const h = location.hash;
+  const i = h.startsWith('#/work/') ? PROJECTS.findIndex(p => p.slug === h.slice(7)) : -1;
+  if (i >= 0) { renderCase(i); document.body.classList.add('is-case'); window.scrollTo(0,0); return; }
+  const wasCase = document.body.classList.contains('is-case');
+  document.body.classList.remove('is-case');
+  document.title = 'Aniket Mahato — Product Designer';
+  if (wasCase) {
+    const el = h.length > 1 && document.getElementById(h.slice(1));
+    requestAnimationFrame(() => window.scrollTo(0, el ? el.getBoundingClientRect().top + window.scrollY - 60 : 0));
+  }
+}
+window.addEventListener('hashchange', route);
+route();
+</script>
+</body>
+</html>
