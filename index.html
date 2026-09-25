@@ -199,6 +199,18 @@ body.is-case #case{display:block}
 .cols2 h3{font-size:19px;margin-bottom:8px;letter-spacing:-.02em}
 .shot{border-radius:14px;overflow:hidden;background:var(--surface)}
 .shot img{width:100%}
+.scr{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,440px);gap:clamp(24px,5vw,72px);align-items:center;background:var(--surface);border-radius:22px;padding:clamp(20px,4vw,56px)}
+.scr-t{display:flex;flex-direction:column;gap:12px}
+.scr-t h2{font-size:clamp(26px,3vw,40px);letter-spacing:-.04em;line-height:1.05}
+.scr-t .prose{margin-top:8px}
+.scr-img{border-radius:16px;overflow:hidden;background:#F2F2F2}
+.scr-img img{width:100%}
+.steps8{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.steps8 div{background:var(--bg);padding:18px;display:flex;flex-direction:column;gap:6px}
+.steps8 b{font-weight:500}
+.steps8 span.lbl{color:var(--muted)}
+.steps8 p{margin:0;color:var(--muted);font-size:14.5px;line-height:1.45}
+@media (max-width:860px){.scr{grid-template-columns:1fr}.scr-img{max-width:420px}.steps8{grid-template-columns:1fr 1fr}}
 .learn{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
 .learn div{background:var(--surface);border-radius:14px;padding:22px;display:flex;flex-direction:column;gap:10px}
 .learn .n{font:italic 400 40px/1 var(--serif);color:var(--accent)}
@@ -369,7 +381,7 @@ body.is-case #case{animation:pageIn .7s cubic-bezier(.2,.8,.2,1) both}
       <a class="card fc wide" href="#/work/hippo-agent-app">
         <div class="cover"><img src="images/covers/hippo-agent-app.jpg" alt="Hippo Agent App cover" loading="lazy"></div>
         <div class="fc-meta">
-          <div><ul class="chips"><li>Mobile app</li><li>Customer support</li><li>2025</li></ul><span class="lbl">01 — Case study</span><h3>Hippo Agent App</h3><p>A mobile-first support app so agents can handle chats, tickets and broadcasts away from the desk.</p></div>
+          <div><ul class="chips"><li>Mobile app</li><li>Customer support</li><li>2025</li></ul><span class="lbl">01 — Case study</span><h3>Hippo Agent App</h3><p>Support that leaves the desk with the agent — a focused mobile app for chats and tickets, shipped on iOS and Android.</p></div>
           <span class="fc-go" aria-hidden="true">→</span>
         </div>
       </a>
@@ -496,29 +508,42 @@ document.getElementById('copyMail').addEventListener('click', async () => {
 /* ===== Case studies — edit text/images here ===== */
 const B = 'https://www.behance.net/gallery/';
 const PROJECTS = [
-  { slug:'hippo-agent-app', title:'Hippo Agent App', cover:'images/covers/hippo-agent-app.jpg', hero:'images/hippo-agent-app/page-01.jpg',
-    summary:'A mobile-first support experience for agents — chats, tickets and broadcasts, away from the desk.',
-    meta:[['Platform','Mobile app'],['Domain','Customer support / agent tools'],['Tools','Figma, FigJam'],['Team','Collaboration with Ishita'],['Year','2025']],
+  { slug:'hippo-agent-app', title:'Hippo Agent App', cover:'images/covers/hippo-agent-app.jpg', hero:'images/hippo-agent-app/01-hero.jpg',
+    summary:'Support that leaves the desk with the agent. Hippo’s web dashboard does everything from marketing automation to AI bots — agents only needed two things on the go: chats and tickets. I designed the mobile app that does those two things well.',
+    meta:[['Role','Product Designer & PM'],['Platform','iOS & Android'],['Scope','Research → UI → Handoff'],['Outcome','Shipped on both stores']],
     behance:B+'243394573/Hippo-Agent-App-Mobile-UXUI-Case-Study',
     blocks:[
-      { label:'Overview', title:'Project overview', img:'images/hippo-agent-app/page-02.jpg',
-        body:'<p>Hippo is a customer communication platform that helps businesses manage customer conversations through chats, tickets, and broadcasts using a web dashboard. This project took the agent experience from concept to high-fidelity mobile design.</p>' },
-      { label:'Roles', title:'Roles & responsibilities',
-        body:'<div class="cols2"><div><h3>Aniket</h3><ul><li class="s">UI visual design</li><li class="s">Component styling &amp; consistency</li><li class="s">High-fidelity screens</li><li class="s">Visual hierarchy and spacing</li><li class="s">Design refinements &amp; iterations</li></ul></div><div><h3>Ishita</h3><ul><li class="s">UX research &amp; problem framing</li><li class="s">Information architecture</li><li class="s">Core user flows (chats, tickets)</li><li class="s">Interaction design</li><li class="s">Case study documentation</li></ul></div></div><p class="note">Decisions were made collaboratively through discussions and reviews.</p>' },
-      { label:'Context', title:'Context & background', img:'images/hippo-agent-app/page-04.jpg',
-        body:'<p>Hippo already had a web-based dashboard for agents and admins. Agents used it to manage chats, tickets, and broadcasts — but it was optimized for desktop.</p><p class="note"><b style="font-weight:500">Key gap —</b> there was no dedicated mobile app for agents, limiting flexibility and real-time responsiveness.</p>' },
-      { label:'Problem', title:'Despite a powerful web dashboard, agents lacked a mobile experience.',
-        body:'<ul><li class="s">Agents were tied to desktops</li><li class="s">Response times increased</li><li class="s">Unassigned chats and urgent tickets were missed</li><li class="s">Desktop workflows didn’t translate to small screens</li></ul>' },
-      { label:'Design challenge', title:'How might we design a mobile-first agent app that…', img:'images/hippo-agent-app/page-06.jpg',
-        body:'<ul><li class="s">Complements the web dashboard</li><li class="s">Enables quick responses on the go</li><li class="s">Simplifies chat and ticket management</li><li class="s">Preserves full customer context</li></ul>' },
-      { label:'Goals', title:'What the app had to deliver.',
-        body:'<ul><li class="s">Faster agent responses</li><li class="s">Clear chat and ticket prioritization</li><li class="s">Reduced navigation effort</li><li class="s">Quick access to saved replies and plans</li><li class="s">Scalable design for future features</li></ul>' },
-      { label:'Core sections', title:'Five sections, one app.', img:'images/hippo-agent-app/page-08.jpg',
-        body:'<ul><li><b>Chats</b><span>Real-time customer conversations in one place</span></li><li><b>Tickets</b><span>Structured issue tracking &amp; resolution</span></li><li><b>Saved replies</b><span>Predefined responses for faster support</span></li><li><b>Broadcasts</b><span>One-to-many communication with customers</span></li><li><b>Profile</b><span>Agent presence and account settings</span></li></ul>' },
-      { label:'Key UX decisions', title:'Built for fast, one-handed triage.', img:'images/hippo-agent-app/page-09.jpg',
-        body:'<ul><li class="s">Tabs for All / Unassigned / My Chats</li><li class="s">Status &amp; priority badges for quick scanning</li><li class="s">Bottom sheets for secondary actions</li><li class="s">Customer details inside chat</li><li class="s">One-tap saved replies</li></ul>' },
-      { label:'Outcome & learnings', title:'A scalable, mobile-first agent app.', img:'images/hippo-agent-app/page-10.jpg',
-        body:'<p>The result: clear, efficient support workflows on mobile.</p><ul><li class="s">Speed matters more than visual complexity</li><li class="s">Status clarity improves usability</li><li class="s">Mobile requires strong prioritization</li></ul>' }
+      { label:'Context', title:'A powerful dashboard, and nothing for agents away from their desks.', img:'images/hippo-agent-app/02-context.jpg',
+        body:'<ul><li><b>Tied to the desk</b><span>Agents could only accept and reply to chats from a laptop, so response time depended on where they were sitting.</span></li><li><b>Dashboard doesn’t shrink</b><span>A three-pane layout with deep navigation. It doesn’t work in a mobile browser.</span></li><li><b>Tickets go stale</b><span>Agents couldn’t see which tickets were pending or critical, or update them, until they were back at a computer.</span></li></ul>' },
+      { label:'Scoping', title:'From ten modules down to four tabs.',
+        body:'<p>I was the PM as well as the designer, so I owned the scope. I audited every dashboard module and asked the same question of each: does an agent need this within minutes, on a phone? Configuration stayed on the web. The app got only the work agents do while a customer is waiting.</p><div class="cols2"><div><h3>In the app</h3><ul><li class="s">Chats inbox &amp; conversation</li><li class="s">Tickets</li><li class="s">Analytics (personal)</li><li class="s">Availability &amp; profile</li></ul></div><div><h3>Stays on web</h3><ul><li class="s">Bots &amp; AI Bot setup</li><li class="s">AI Voice Agent</li><li class="s">Marketing automation</li><li class="s">Help Center &amp; user management</li></ul></div></div>' },
+      { label:'Information architecture', title:'Four tabs, each one job.',
+        body:'<p>The dashboard has a deep sidebar: Chats alone has seven sub-sections. On mobile I flattened it into a bottom tab bar ordered by how often agents use each part. Anything used less than daily lives under More.</p><ul><li><b>Inbox</b><span>All / Unassigned / My Chats, filters, chat detail, notes &amp; saved replies, voice &amp; video call</span></li><li><b>Tickets</b><span>Active / status filter, ticket detail, status &amp; priority, assignee</span></li><li><b>Analytics</b><span>Personal performance, chat &amp; ticket volume</span></li><li><b>More</b><span>Profile &amp; Away status, broadcast history, change password, logout</span></li></ul>' },
+      { label:'Research & process', title:'Eight steps from interviews to handoff.',
+        body:'<p>Each step fed the next — and three findings changed the design directly.</p>' , after:'<div class="steps8"><div><span class="lbl">01</span><b>Agent interviews</b><p>When and where agents missed customers.</p></div><div><span class="lbl">02</span><b>Competitor audit</b><p>Intercom, Freshdesk and Zendesk mobile: navigation, inbox, composer.</p></div><div><span class="lbl">03</span><b>Dashboard audit</b><p>Mapped every web module; scoped what belongs on mobile.</p></div><div><span class="lbl">04</span><b>User flows</b><p>Login, accept chat, reply, assign, update ticket, go away.</p></div><div><span class="lbl">05</span><b>Wireframes</b><p>Inbox density and ticket card layouts before visuals.</p></div><div><span class="lbl">06</span><b>Usability testing</b><p>Tested key flows with agents; iterated on the ticket list.</p></div><div><span class="lbl">07</span><b>Design system</b><p>Components mirroring the dashboard’s status and priority language.</p></div><div><span class="lbl">08</span><b>Dev handoff</b><p>Specs, states and edge cases for iOS and Android.</p></div></div>' },
+      { label:'What the research changed', title:'Three findings, three design moves.', learn:[
+        ['Agents didn’t want to be always on','They needed an obvious way to say “I’m here” or “I’m away”, so availability became the first control in the inbox and profile.'],
+        ['The best apps do less','The strongest mobile support apps focus on the inbox and move setup to the web. That backed our scope cut.'],
+        ['Tickets need scanning, not reading','Testers looked for status and ID first. Both moved to the top-right of the card; priority became a coloured chip.'] ] },
+      { label:'Chats · Inbox', title:'Availability first, then the queue.', phone:'images/hippo-agent-app/05-inbox.jpg',
+        body:'<ul><li class="s">The “available for chat” toggle sits at the top — it’s the first decision an agent makes.</li><li class="s">All, Unassigned and My Chats filters mirror the dashboard, so agents already know them.</li><li class="s">Unassigned and tag chips show what needs picking up at a glance.</li></ul>' },
+      { label:'Chats · Conversation', title:'A full composer, sized for a thumb.', phone:'images/hippo-agent-app/06-chat.jpg',
+        body:'<ul><li class="s">Voice and video call actions live in the header, next to the visitor.</li><li class="s">Files, images and bot-session events render inline in the conversation.</li><li class="s">Formatting, notes, saved replies and templates sit in one toolbar below the input.</li></ul>' },
+      { label:'Tickets', title:'Status, priority, owner in one row.', phone:'images/hippo-agent-app/07-tickets.jpg',
+        body:'<ul><li class="s">Each card shows status (Open, Pending, New) and ticket ID in the corner.</li><li class="s">Priority chips are colour-coded: Normal, Urgent, Critical.</li><li class="s">An Active filter in the header keeps the list focused on work in progress.</li></ul>' },
+      { label:'Profile', title:'Stepping away is one tap.', phone:'images/hippo-agent-app/08-profile.jpg',
+        body:'<ul><li class="s">“Set as Away” stops new chats from being routed to the agent.</li><li class="s">Account basics only: identity, password and logout.</li></ul>' },
+      { label:'Design system', title:'A mobile system that speaks the dashboard’s language.', img:'images/hippo-agent-app/09-system.jpg',
+        body:'<p>Agents switch between web and phone all day, so I didn’t build a new visual language: I took the dashboard’s status, priority and assignment rules and rebuilt them as touch-sized components — on a 4pt grid inside a 390 × 843 frame with 16px side margins.</p>' },
+      { label:'Key decisions', title:'Trade-offs I made, and why.',
+        body:'<ul><li><b>Availability is a first-class control</b><span>Routing depends on whether an agent is online, so the toggle sits at the top of the inbox. <em>Trade-off:</em> it takes a row above the fold on every visit.</span></li><li><b>Mirror the dashboard, don’t reinvent it</b><span>Filters, status names and priority colours match the web one-to-one. <em>Trade-off:</em> less freedom to rethink terms that are awkward on mobile.</span></li><li><b>One row of tools in the composer</b><span>Everything sits under the input so the keyboard doesn’t push it off-screen. <em>Trade-off:</em> icons over labels.</span></li><li><b>Configuration stays on web</b><span>Bots, automation and voice agents are set up once by admins. <em>Trade-off:</em> admins on the go still need a laptop to change routing.</span></li></ul>' },
+      { label:'The core loop', title:'Login → Inbox → Chat → Tickets → Profile.', img:'images/hippo-agent-app/10-loop.jpg' },
+      { label:'Outcome', title:'Shipped on iOS and Android.', learn:[
+        ['Agents can work from anywhere','They set their availability, take chats and resolve tickets from their phone.'],
+        ['One language across web and mobile','Status, priority and assignment work the same on both — no relearning.'],
+        ['A reusable component library','Ticket cards, chips, list rows and composer tools sped up handoff and future features.'] ] },
+      { label:'Learnings', title:'The hardest part wasn’t designing the four tabs. It was deciding what to leave on the web.', img:'images/hippo-agent-app/11-hand.jpg',
+        body:'<p>Being both PM and designer meant every “yes” had to hold up against the roadmap.</p><p>Next, I’d bring saved replies and chat notes into quicker gestures, and give agents a personal analytics view to track their own response times.</p>' }
     ] },
   { slug:'conexus', title:'Conexus', cover:'images/covers/conexus.jpg', hero:'images/conexus/01-hero.jpg',
     summary:'Connecting businesses with trusted experts through one seamless consultation platform.',
@@ -575,10 +600,11 @@ function renderCase(i){
   const blocks = (p.blocks || []).map(b => {
     const shot = b.img ? `<div class="shot"><img src="${b.img}" alt="${esc(b.alt || b.title || p.title)}" loading="lazy"></div>` : '';
     if (!b.label) return `<div class="blk">${shot}</div>`;
+    if (b.phone) { n++; return `<div class="blk scr"><div class="scr-t"><span class="lbl a">[ ${pad(n)} ] ${esc(b.label)}</span><h2>${esc(b.title)}</h2><div class="prose">${b.body}</div></div><div class="scr-img"><img src="${b.phone}" alt="${esc(b.title)}" loading="lazy"></div></div>`; }
     n++;
     const body = b.learn
       ? `<div class="learn">${b.learn.map((l,k)=>`<div><span class="n">${pad(k+1)}</span><h3>${esc(l[0])}</h3><p>${esc(l[1])}</p></div>`).join('')}</div>` : '';
-    return `<div class="blk"><div class="blk-t"><div><span class="lbl a">[ ${pad(n)} ] ${esc(b.label)}</span><h2>${esc(b.title)}</h2></div>${b.body ? `<div class="prose">${b.body}</div>` : ''}</div>${body}${shot}</div>`;
+    return `<div class="blk"><div class="blk-t"><div><span class="lbl a">[ ${pad(n)} ] ${esc(b.label)}</span><h2>${esc(b.title)}</h2></div>${b.body ? `<div class="prose">${b.body}</div>` : ''}</div>${body}${b.after||''}${shot}</div>`;
   }).join('');
   const rest = p.blocks ? `<div class="cs-body">${blocks}</div>`
     : `<div class="cs-body"><div class="soon"><span class="lbl a">Full case study</span><p>The full write-up for this project is being moved over. Until then, you can see it on Behance.</p><a class="btn" href="${p.behance}" target="_blank" rel="noopener">View on Behance ↗</a></div></div>`;
